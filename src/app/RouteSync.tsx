@@ -20,10 +20,16 @@ export function RouteSync(): null {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // URL → store
+  // URL → store & smooth scroll
   useEffect(() => {
     const id = PATH_TO_ROUTE[location.pathname] ?? null;
     useRouteStore.getState().setActiveRoute(id);
+    if (id && id !== 'home') {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   }, [location.pathname]);
 
   // Store → URL

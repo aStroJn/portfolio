@@ -6,7 +6,7 @@ export function AboutSection(): JSX.Element {
         minHeight: 'auto',
         background: '#0a0a0f',
         color: '#fff',
-        padding: 'clamp(2.5rem, 5vw, 3.5rem) clamp(1rem, 3.5vw, 2rem) clamp(2.5rem, 5vw, 4rem)',
+        padding: '0 clamp(2.5rem, 5vw, 4rem) 0',
         boxSizing: 'border-box',
         position: 'relative',
         overflow: 'hidden',
@@ -26,25 +26,28 @@ export function AboutSection(): JSX.Element {
             src="/assets/site/section-four/section-four-title.svg"
             alt="ABOUT ME"
             style={{
-              width: 'clamp(180px, 45vw, 260px)',
+              width: 'clamp(180px, 35vw, 260px)',
               height: 'auto',
               display: 'block',
             }}
           />
         </div>
 
-        {/* Polaroid and Papernote Container (Snug together, responsive on all devices) */}
+        {/* Polaroid and Papernote Composition - Replicates desktop layout on all screen sizes */}
         <div
           style={{
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: 'clamp(1rem, 2.5vw, 2.5rem)',
-            flexWrap: 'wrap',
+            width: '100%',
+            maxWidth: '1080px',
+            margin: '0 auto',
+            paddingRight: 'clamp(40px, 8vw, 120px)',
+            boxSizing: 'border-box',
           }}
         >
-          {/* Left: Polaroid Frame */}
+          {/* 3. Left: Polaroid Frame (Snug to the papernote) */}
           <div
             style={{
               transform: 'rotate(-3deg)',
@@ -56,7 +59,7 @@ export function AboutSection(): JSX.Element {
               src="/assets/site/section-four/section-four-polaroid.png"
               alt="Polaroid illustration"
               style={{
-                width: 'clamp(190px, 32vw, 300px)',
+                width: 'clamp(120px, 24vw, 275px)',
                 height: 'auto',
                 filter: 'drop-shadow(0 14px 28px rgba(0,0,0,0.7))',
                 display: 'block',
@@ -64,17 +67,17 @@ export function AboutSection(): JSX.Element {
             />
           </div>
 
-          {/* Right: papernote.png + Overlaid Sticky Note & Mountain Doodle */}
+          {/* Right: papernote.png + Overlaid Sticky Note (Box 1) & Mountain Doodle (Box 2) */}
           <div
             style={{
               position: 'relative',
               width: '100%',
-              maxWidth: '660px',
-              flex: '1 1 300px',
+              maxWidth: '580px',
+              flex: '1 1 200px',
               boxSizing: 'border-box',
             }}
           >
-            {/* The Paper Note Graphic Asset (section-four-papernote.png) */}
+            {/* The Paper Note Graphic Asset */}
             <img
               src="/assets/site/section-four/section-four-papernote.png"
               alt="About me note - Full-stack engineer and Designer"
@@ -83,18 +86,21 @@ export function AboutSection(): JSX.Element {
                 height: 'auto',
                 display: 'block',
                 filter: 'drop-shadow(0 16px 36px rgba(0, 0, 0, 0.6))',
+                position: 'relative',
+                zIndex: 2,
               }}
             />
 
-            {/* Overlaid Yellow Sticky Note pinned to the top-right corner with zero text overlap */}
+            {/* 1. Sticky Note - Placed in Red Box 1 on the right edge */}
+            {/* Manual position tuning: adjust `top` (vertical) and `right` (horizontal offset) below */}
             <div
               style={{
                 position: 'absolute',
-                top: '-15px',
-                right: 'clamp(-15px, -2vw, -30px)',
-                width: 'clamp(75px, 14vw, 135px)',
-                transform: 'rotate(5deg)',
-                zIndex: 12,
+                top: 'clamp(15px, 9%, 57px)',
+                right: 'clamp(-103px, -18%, -125px)',
+                width: 'clamp(70px, 15vw, 135px)',
+                transform: 'rotate(4deg)',
+                zIndex: 2,
                 pointerEvents: 'none',
               }}
             >
@@ -110,23 +116,24 @@ export function AboutSection(): JSX.Element {
               />
             </div>
 
-            {/* Mountain Peaks Doodle + "Some curiosity as always." (below sticky note at bottom-right corner) */}
+            {/* 2. Mountain Doodle + Text - Scaled up & Placed in Red Box 2 on the bottom-right */}
+            {/* Manual position tuning: adjust `bottom` (vertical) and `right` (horizontal offset) below */}
             <div
               style={{
                 position: 'absolute',
-                bottom: 'clamp(5px, 2vw, 25px)',
-                right: 'clamp(-10px, -1.5vw, -25px)',
+                bottom: 'clamp(30px, 4%, 30px)',
+                right: 'clamp(-120px, -19%, -115px)',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                zIndex: 10,
+                zIndex: 3,
                 pointerEvents: 'none',
               }}
             >
-              {/* Pink Line Mountain Doodle */}
+              {/* Scaled-up Pink Line Mountain Doodle */}
               <svg
-                width="clamp(50px, 9vw, 80px)"
-                height="clamp(32px, 5.5vw, 50px)"
+                width="clamp(55px, 12vw, 105px)"
+                height="clamp(36px, 7.5vw, 68px)"
                 viewBox="0 0 100 65"
                 fill="none"
                 style={{ display: 'block' }}
@@ -189,10 +196,10 @@ export function AboutSection(): JSX.Element {
               <div
                 style={{
                   fontFamily: "'Caveat', 'Comic Sans MS', cursive",
-                  fontSize: 'clamp(0.8rem, 1.2vw, 1.15rem)',
+                  fontSize: 'clamp(0.85rem, 1.4vw, 1.28rem)',
                   color: '#f472b6',
                   lineHeight: 1.15,
-                  marginTop: '2px',
+                  marginTop: '3px',
                   textAlign: 'center',
                   transform: 'rotate(2deg)',
                   whiteSpace: 'nowrap',

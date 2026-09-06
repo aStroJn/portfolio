@@ -17,6 +17,10 @@ export function SignboardOverlay({ signboard }: SignboardOverlayProps): JSX.Elem
   dispatch.current = (item) => {
     if (item.route) {
       useRouteStore.getState().setActiveRoute(item.route);
+      const target = document.getElementById(item.route);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 

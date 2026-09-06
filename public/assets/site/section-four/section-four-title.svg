@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 2573 902" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(1,0,0,1,-1857,-23578)">
-        <g id="section-four-title" transform="matrix(1,-0,-0,1,1857,23578)">
-            <use xlink:href="#_Image1" x="64" y="237" width="2299px" height="331px"/>
+<svg width="100%" height="100%" viewBox="0 0 2573 457" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1857,-23788)">
+        <g id="_Image1_" serif:id="_Image1" transform="matrix(1.111071,0,0,1.111071,1866.324024,23845.117769)">
+            <g id="section-four-title">
+                <use id="_Image1_1" serif:id="_Image1" xlink:href="#_Image1" x="0" y="0" width="2299px" height="331px"/>
+            </g>
         </g>
     </g>
     <defs>

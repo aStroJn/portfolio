@@ -9,6 +9,9 @@ export class TouchParallaxAdapter {
   private panProgress = 0.5;
   private panVelocity = 0;
   private lastTouchX = 0;
+  private startTouchX = 0;
+  private startTouchY = 0;
+  private isHorizontalSwipe = false;
 
   constructor(private readonly target: Window = window) {
     if (typeof this.target !== 'undefined' && this.target.addEventListener) {
@@ -22,9 +25,12 @@ export class TouchParallaxAdapter {
   private onTouchStart = (e: TouchEvent) => {
     this.isTouching = true;
     this.panVelocity = 0;
+    this.isHorizontalSwipe = false;
     const t = e.touches[0];
     if (t) {
       this.lastTouchX = t.clientX;
+      this.startTouchX = t.clientX;
+      this.startTouchY = t.clientY;
     }
     this.updateFromTouch(e);
   };
@@ -33,18 +39,28 @@ export class TouchParallaxAdapter {
     this.isTouching = true;
     const t = e.touches[0];
     if (t) {
-      const deltaX = t.clientX - this.lastTouchX;
+      const dx = Math.abs(t.clientX - this.startTouchX);
+      const dy = Math.abs(t.clientY - this.startTouchY);
+
+      if (!this.isHorizontalSwipe && dx > dy && dx > 8) {
+        this.isHorizontalSwipe = true;
+      }
+
+      if (this.isHorizontalSwipe) {
+        const deltaX = t.clientX - this.lastTouchX;
+        const w = (this.target && this.target.innerWidth) || 1;
+        const deltaPan = -deltaX / (w * 1.2);
+        this.panProgress = Math.max(0, Math.min(1, this.panProgress + deltaPan));
+        this.panVelocity = deltaPan;
+      }
       this.lastTouchX = t.clientX;
-      const w = (this.target && this.target.innerWidth) || 1;
-      const deltaPan = -deltaX / (w * 1.2);
-      this.panProgress = Math.max(0, Math.min(1, this.panProgress + deltaPan));
-      this.panVelocity = deltaPan;
     }
     this.updateFromTouch(e);
   };
 
   private onTouchEnd = () => {
     this.isTouching = false;
+    this.isHorizontalSwipe = false;
     this.targetX = 0;
     this.targetY = 0;
   };

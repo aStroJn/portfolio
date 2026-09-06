@@ -9,6 +9,8 @@ import { AboutSection } from '../components/AboutSection';
 import { ContactSection } from '../components/ContactSection';
 import { Footer } from '../components/Footer';
 import { useReducedMotion } from '../hooks/useReducedMotion';
+import { OrientationPrompt } from '../components/scene-ui/OrientationPrompt';
+import './orientation.css';
 
 export function App(): JSX.Element {
   const sceneContainerRef = useRef<HTMLDivElement>(null);
@@ -17,6 +19,7 @@ export function App(): JSX.Element {
   return (
     <div style={{ position: 'relative', width: '100%', minHeight: '100vh', overflowX: 'hidden', background: '#0a0a0f', color: '#fff' }}>
       <RouteSync />
+      <OrientationPrompt />
 
       {reducedMotion && (
         <div
@@ -56,12 +59,11 @@ export function App(): JSX.Element {
 
       {/* Hero Scene Section with PixiJS + HTML Overlays + Soft Vignette */}
       <section
+        id="hero-scene-section"
         aria-describedby="scene-description"
         style={{
           position: 'relative',
           width: '100%',
-          height: '100dvh',
-          minHeight: '100vh',
           overflow: 'hidden',
           background: '#0a0a0f',
           touchAction: 'pan-y',
@@ -72,15 +74,14 @@ export function App(): JSX.Element {
         </div>
         <SceneOverlays containerRef={sceneContainerRef} />
 
-        {/* Soft atmospheric vignette covering the outer edge without hiding the center scene */}
+        {/* Soft atmospheric vignette covering outer edges and bottom section transition on both desktop and mobile */}
         <div
+          className="hero-vignette"
           aria-hidden="true"
           style={{
             position: 'absolute',
             inset: 0,
             pointerEvents: 'none',
-            background:
-              'radial-gradient(ellipse 90% 85% at 50% 50%, rgba(10, 10, 15, 0) 60%, rgba(10, 10, 15, 0.35) 85%, rgba(10, 10, 15, 0.8) 100%), linear-gradient(to bottom, transparent 80%, #0a0a0f 100%)',
           }}
         />
       </section>

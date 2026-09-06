@@ -8,7 +8,7 @@ export function ProjectsSection(): JSX.Element {
         minHeight: 'auto',
         background: '#0a0a0f',
         color: '#fff',
-        padding: 'clamp(2.5rem, 5vw, 3.5rem) clamp(1rem, 3.5vw, 2rem) clamp(2.5rem, 5vw, 4rem)',
+        padding: '10px clamp(1rem, 3.5vw, 2rem) 10px',
         boxSizing: 'border-box',
         position: 'relative',
         overflow: 'hidden',
@@ -31,7 +31,7 @@ export function ProjectsSection(): JSX.Element {
               src="/assets/site/section-one/section-one-title.svg"
               alt="01. FEATURED PROJECTS - Real-world projects, experiments and ideas brought to life."
               style={{
-                width: 'clamp(180px, 34vw, 380px)',
+                width: 'clamp(180px, 60vw, 600px)',
                 height: 'auto',
                 display: 'block',
               }}

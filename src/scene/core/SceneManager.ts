@@ -38,6 +38,8 @@ export class SceneManager {
   private scrollDirector: ScrollDirector | null = null;
   private signRightSprite: Sprite | null = null;
   private isDestroyed = false;
+  private mountParent: HTMLElement | null = null;
+  private resizeObserver: ResizeObserver | null = null;
   private onResize = () => this.handleResize();
 
   constructor(
@@ -48,14 +50,15 @@ export class SceneManager {
 
   async mount(parent: HTMLElement): Promise<void> {
     if (this.isDestroyed) return;
+    this.mountParent = parent;
     const isBrowser = typeof window !== 'undefined';
-    const innerWidth = isBrowser ? window.innerWidth : sceneData.masterWidth;
-    const innerHeight = isBrowser ? window.innerHeight : sceneData.masterHeight;
+    const width = isBrowser ? (parent.clientWidth || window.innerWidth) : sceneData.masterWidth;
+    const height = isBrowser ? (parent.clientHeight || window.innerHeight) : sceneData.masterHeight;
 
     const app = new Application();
     const appOptions: Partial<ApplicationOptions> = {
-      width: innerWidth,
-      height: innerHeight,
+      width,
+      height,
       backgroundAlpha: 0,
       antialias: false,
       resolution: Math.min(isBrowser ? window.devicePixelRatio || 1 : 1, 2),
@@ -73,7 +76,15 @@ export class SceneManager {
     }
 
     this.app = app;
+    if (this.app.canvas) {
+      this.app.canvas.style.touchAction = 'pan-y';
+    }
     parent.appendChild(this.app.canvas);
+
+    if (typeof ResizeObserver !== 'undefined') {
+      this.resizeObserver = new ResizeObserver(() => this.handleResize());
+      this.resizeObserver.observe(parent);
+    }
 
     this.camera = new Camera(sceneData.masterWidth, sceneData.masterHeight);
     this.app.stage.addChild(this.camera.root);
@@ -216,19 +227,33 @@ export class SceneManager {
     } else {
       const m = this.mouseAdapter ? this.mouseAdapter.getInput() : ZERO_PARALLAX;
       const s = this.scrollAdapter ? this.scrollAdapter.getInput() : ZERO_PARALLAX;
-      const t = this.touchAdapter ? this.touchAdapter.getInput() : ZERO_PARALLAX;
       const g = this.gyroAdapter ? this.gyroAdapter.getInput() : ZERO_PARALLAX;
+      const t = this.touchAdapter ? this.touchAdapter.getInput() : ZERO_PARALLAX;
+
+      const hasGyroSensor = Boolean(this.gyroAdapter?.hasSensor());
+
+      // If physical gyro sensor is active, gyro drives parallax (calibrated 0.65x for subtle, realistic depth without clipping)
+      // If gyro sensor is not available (e.g. insecure local HTTP testing), smooth touch drag provides parallax
+      const activeX = hasGyroSensor ? g.x * 0.65 : t.x;
+      const activeY = hasGyroSensor ? g.y * 0.50 : t.y;
 
       this.parallax.update(
         {
-          x: m.x + t.x + g.x,
-          y: m.y + s.y + t.y + g.y,
+          x: m.x + activeX,
+          y: m.y + s.y + activeY,
         },
         scrollProgress,
       );
 
-      if (this.touchAdapter && this.camera) {
-        this.camera.setPanProgress(this.touchAdapter.getPanProgress());
+      if (this.camera) {
+        if (hasGyroSensor && this.gyroAdapter) {
+          this.camera.setPanProgress(
+            this.gyroAdapter.getPanProgress(),
+            this.gyroAdapter.getPanProgressY(),
+          );
+        } else if (this.touchAdapter) {
+          this.camera.setPanProgress(this.touchAdapter.getPanProgress());
+        }
       }
     }
 
@@ -247,16 +272,26 @@ export class SceneManager {
   private handleResize(): void {
     if (!this.app || !this.camera || this.isDestroyed) return;
     const isBrowser = typeof window !== 'undefined';
-    const width = isBrowser ? window.innerWidth : sceneData.masterWidth;
-    const height = isBrowser ? window.innerHeight : sceneData.masterHeight;
+    const width = isBrowser
+      ? (this.mountParent?.clientWidth || window.innerWidth)
+      : sceneData.masterWidth;
+    const height = isBrowser
+      ? (this.mountParent?.clientHeight || window.innerHeight)
+      : sceneData.masterHeight;
     if (this.app.renderer) {
       this.app.renderer.resize(width, height);
+    }
+    if (this.app.canvas) {
+      this.app.canvas.style.touchAction = 'pan-y';
     }
     this.camera.resize(width, height);
   }
 
   destroy(): void {
     this.isDestroyed = true;
+    this.resizeObserver?.disconnect();
+    this.resizeObserver = null;
+    this.mountParent = null;
     if (typeof window !== 'undefined') {
       window.removeEventListener('resize', this.onResize);
     }

@@ -11,7 +11,7 @@ export function ContactSection(): JSX.Element {
         minHeight: 'auto',
         background: '#0a0a0f',
         color: '#fff',
-        padding: 'clamp(2rem, 4vw, 3rem) 0 0',
+        padding: '0',
         boxSizing: 'border-box',
         position: 'relative',
         overflow: 'hidden',

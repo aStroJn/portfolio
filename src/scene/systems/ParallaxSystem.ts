@@ -43,9 +43,11 @@ export class ParallaxSystem {
       if (!orig) continue;
       const depth = obj.depth ?? 0;
 
-      // Mouse/Pointer parallax offset
-      const mouseOffsetX = -input.x * depth * this.config.amplitudeX;
-      const mouseOffsetY = -input.y * depth * this.config.amplitudeY;
+      // Mouse/Pointer parallax offset with safe clamping so layer boundaries are never exposed
+      const rawMouseOffsetX = -input.x * depth * this.config.amplitudeX;
+      const rawMouseOffsetY = -input.y * depth * this.config.amplitudeY;
+      const mouseOffsetX = Math.max(-25, Math.min(25, rawMouseOffsetX));
+      const mouseOffsetY = Math.max(-15, Math.min(15, rawMouseOffsetY));
 
       // Scroll-driven parting and transition offsets
       let scrollOffsetX = 0;

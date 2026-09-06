@@ -24,7 +24,12 @@ export class ScrollDirector {
       window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reducedMotion) return;
 
-    this.lenis = new Lenis();
+    this.lenis = new Lenis({
+      syncTouch: false,
+    });
+    if (typeof this.lenis.on === 'function') {
+      this.lenis.on('scroll', ScrollTrigger.update);
+    }
     gsap.ticker.add((time) => this.lenis?.raf(time * 1000));
     gsap.ticker.lagSmoothing(0);
 
