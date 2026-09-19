@@ -16,7 +16,7 @@ export function AboutSection(): JSX.Element {
         style={{
           maxWidth: '1240px',
           width: '100%',
-          margin: '0 auto',
+          margin: '1% auto',
           boxSizing: 'border-box',
         }}
       >
@@ -59,7 +59,7 @@ export function AboutSection(): JSX.Element {
               src="/assets/site/section-four/section-four-polaroid.png"
               alt="Polaroid illustration"
               style={{
-                width: 'clamp(120px, 24vw, 275px)',
+                width: 'clamp(140px, 28vw, 300px)',
                 height: 'auto',
                 filter: 'drop-shadow(0 14px 28px rgba(0,0,0,0.7))',
                 display: 'block',
@@ -72,7 +72,7 @@ export function AboutSection(): JSX.Element {
             style={{
               position: 'relative',
               width: '100%',
-              maxWidth: '580px',
+              maxWidth: '620px',
               flex: '1 1 200px',
               boxSizing: 'border-box',
             }}
@@ -96,7 +96,7 @@ export function AboutSection(): JSX.Element {
             <div
               style={{
                 position: 'absolute',
-                top: 'clamp(15px, 9%, 57px)',
+                top: 'clamp(12px, 10%, 60px)',
                 right: 'clamp(-103px, -18%, -125px)',
                 width: 'clamp(70px, 15vw, 135px)',
                 transform: 'rotate(4deg)',

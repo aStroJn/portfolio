@@ -7,4 +7,6 @@ dist/
 coverage/
 
 CLAUDE.md                                                   
-docs/* 
+docs/
+.openclaude/
+.superpowers/

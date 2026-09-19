@@ -87,7 +87,7 @@ export function ToolboxSection(): JSX.Element {
         }}
       >
         <img
-          src="/assets/site/section-two/section-two-shelf.png"
+          src="/assets/site/section-two/section-two-shelf.webp"
           alt="Toolbox shelf"
           style={{
             width: '100%',

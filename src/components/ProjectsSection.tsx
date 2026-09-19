@@ -66,12 +66,11 @@ export function ProjectsSection(): JSX.Element {
             gap: '1.75rem',
           }}
         >
-          {/* Card 1: Anime Girl AI */}
           <ProjectCard
-            title="Anime Girl AI"
+            title="MOSSO | E-Commerce Catalog"
             description="Autonomous anime AI companion with interactive chat, emotional memory, and real-time voice synthesis."
-            tags={['REACT', 'TYPESCRIPT', 'TAILWIND', 'FASTAPI', 'OPENAI']}
-            link="https://github.com"
+            tags={['REACT', 'TYPESCRIPT', 'TAILWIND', 'WORDPRESS']}
+            link="https://mosso-zeta.vercel.app"
             preview={
               <div
                 style={{
@@ -113,7 +112,6 @@ export function ProjectsSection(): JSX.Element {
                         fontSize: '10px',
                       }}
                     >
-                      AI
                     </div>
                     <div>
                       <div style={{ fontSize: '10px', fontWeight: 700, color: '#f472b6' }}>Aiko • Online</div>

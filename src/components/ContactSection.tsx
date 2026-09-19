@@ -62,10 +62,10 @@ export function ContactSection(): JSX.Element {
         <div
           style={{
             position: 'absolute',
-            top: '58.5%',
-            left: '23.8%',
+            top: '49.8%',
+            left: '25%',
             width: '22%',
-            height: '15.5%',
+            height: '13%',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
@@ -77,43 +77,45 @@ export function ContactSection(): JSX.Element {
           }}
         >
           <a
-            href="mailto:hello@akshat.dev"
-            style={{
-              color: '#4ade80',
-              textDecoration: 'none',
-              whiteSpace: 'nowrap',
-              transition: 'color 0.2s',
-            }}
-          >
-            hello@akshat.dev
-          </a>
-
-          <a
-            href="https://linkedin.com/in/akshat"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=jainak133@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              color: '#4ade80',
+              color: '#46FF55',
               textDecoration: 'none',
               whiteSpace: 'nowrap',
               transition: 'color 0.2s',
             }}
           >
-            linkedin.com/in/akshat
+            astropia@contact.mail
           </a>
 
           <a
-            href="https://github.com/akshat"
+            href="https://www.linkedin.com/in/akshatj2002/"
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              color: '#4ade80',
+              color: '#46FF55',
               textDecoration: 'none',
               whiteSpace: 'nowrap',
               transition: 'color 0.2s',
             }}
           >
-            github.com/akshat
+            linkedin.com/in/astro
+          </a>
+
+          <a
+            href="https://github.com/aStroJn"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: '#46FF55',
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+              transition: 'color 0.2s',
+            }}
+          >
+            github.com/astropia
           </a>
         </div>
 
@@ -122,7 +124,7 @@ export function ContactSection(): JSX.Element {
           style={{
             position: 'absolute',
             top: '12%',
-            right: 'clamp(4%, 7vw, 8%)',
+            right: 'clamp(2%, 12vw, 12%)',
             display: 'flex',
             flexDirection: 'column',
             gap: 'clamp(0.5rem, 1.5vw, 1.25rem)',
@@ -132,7 +134,7 @@ export function ContactSection(): JSX.Element {
           {/* Dashed Left Border Info Text */}
           <div
             style={{
-              borderLeft: '1.5px dashed rgba(148, 163, 184, 0.5)',
+              borderLeft: '1px dashed rgba(148, 163, 184, 0.5)',
               paddingLeft: 'clamp(0.5rem, 1.2vw, 1.25rem)',
               color: '#cbd5e1',
               fontSize: 'clamp(0.75rem, 1.2vw, 1.25rem)',
@@ -148,7 +150,7 @@ export function ContactSection(): JSX.Element {
           </div>
 
           {/* Glowing CTA Button with Pointing Hand */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(4px, 1vw, 10px)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(4px, 0vw, 10px)' }}>
             {/* Pointing Hand Icon */}
             <svg
               width="clamp(22px, 3.5vw, 36px)"
@@ -171,7 +173,8 @@ export function ContactSection(): JSX.Element {
 
             {/* Glowing Button */}
             <a
-              href="mailto:hello@akshat.dev"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=jainak133@gmail.com"
+              target="_blank"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               style={{
