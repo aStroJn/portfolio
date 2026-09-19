@@ -68,7 +68,7 @@ export function ProjectsSection(): JSX.Element {
         >
           <ProjectCard
             title="MOSSO | E-Commerce Catalog"
-            description="Autonomous anime AI companion with interactive chat, emotional memory, and real-time voice synthesis."
+            description="Headless e-commerce catalog powered by React and WordPress, featuring dynamic product management, collection-based browsing and GST-aware cart workflows"
             tags={['REACT', 'TYPESCRIPT', 'TAILWIND', 'WORDPRESS']}
             link="https://mosso-zeta.vercel.app"
             preview={
@@ -138,9 +138,9 @@ export function ProjectsSection(): JSX.Element {
 
           {/* Card 2: Devfolio Studio */}
           <ProjectCard
-            title="Devfolio Studio"
-            description="High-performance, immersive 2D web portfolio engine powered by PixiJS, GSAP, and reactive state stores."
-            tags={['PIXI.JS', 'REACT', 'GSAP', 'ZUSTAND', 'VITE']}
+            title="Voice2Code"
+            description="Local voice-to-code assistant that turns natural language into code with real-time speech recognition, AI generation, and automated code insertion."
+            tags={['PYTHON', 'FLASK', 'ELECTROM', 'OLLAMA']}
             link="https://github.com"
             preview={
               <div

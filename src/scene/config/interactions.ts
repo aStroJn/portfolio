@@ -33,10 +33,10 @@ export const interactionConfig: InteractionConfig = {
     {
       id: 'signRight',
       items: [
-        { label: 'NAVIGATIONS', relX: 0.34, relY: 0.27, isHeader: true },
-        { label: 'Projects', route: 'projects', relX: 0.32, relY: 0.38 },
-        { label: 'About', route: 'about', relX: 0.38, relY: 0.47 },
-        { label: 'Contact', route: 'contact', relX: 0.34, relY: 0.55 },
+        { label: 'NAVIGATIONS', relX: 0.5, relY: 0.13, isHeader: true },
+        { label: 'Projects', route: 'projects', relX: 0.5, relY: 0.24 },
+        { label: 'About', route: 'about', relX: 0.5, relY: 0.36 },
+        { label: 'Contact', route: 'contact', relX: 0.5, relY: 0.47 },
       ],
     },
   ],

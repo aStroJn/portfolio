@@ -15,6 +15,7 @@ export type SceneObjectId =
   | 'bench'
   | 'signLeft'
   | 'signRight'
+  | 'rightLamp'
   | 'screenLeft'
   | 'screenRight'
   | 'ground'

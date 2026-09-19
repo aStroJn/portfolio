@@ -60,6 +60,7 @@ export function App(): JSX.Element {
       {/* Hero Scene Section with PixiJS + HTML Overlays + Soft Vignette */}
       <section
         id="hero-scene-section"
+        data-parallax-hero
         aria-describedby="scene-description"
         style={{
           position: 'relative',

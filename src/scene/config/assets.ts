@@ -16,6 +16,7 @@ export const sceneAssets = {
   screenLeft: '/assets/scene/objects/screen-left/screen-left-one.png',
   screenRight: '/assets/scene/objects/screen right/screen-right-one.png',
   signRight: '/assets/scene/objects/sign-right.png',
+  rightLamp: '/assets/scene/objects/right-lamp.png',
 } as const;
 
 export const screenLeftFrames = [
@@ -55,6 +56,7 @@ export function findAssetPath(id: SceneObjectId): string | null {
     screenLeft: sceneAssets.screenLeft,
     screenRight: sceneAssets.screenRight,
     signRight: sceneAssets.signRight,
+    rightLamp: sceneAssets.rightLamp,
   };
   return map[id] ?? null;
 }
