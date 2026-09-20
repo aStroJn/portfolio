@@ -84,54 +84,24 @@ export function ProjectsSection(): JSX.Element {
                   overflow: 'hidden',
                 }}
               >
-                {/* Visual Placeholder: Cyberpunk Chat UI */}
+                
                 <div
                   style={{
-                    width: '88%',
-                    height: '80%',
+                    width: '93%',
+                    height: '85%',
                     background: 'rgba(10, 11, 20, 0.85)',
-                    borderRadius: '8px',
+                    borderRadius: '5px',
                     border: '1px solid rgba(236, 72, 153, 0.3)',
-                    padding: '10px',
+                    padding: '2px',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
                     boxShadow: '0 0 20px rgba(236, 72, 153, 0.15)',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <div
-                      style={{
-                        width: '24px',
-                        height: '24px',
-                        borderRadius: '50%',
-                        background: 'linear-gradient(45deg, #ec4899, #8b5cf6)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontSize: '10px',
-                      }}
-                    >
-                    </div>
-                    <div>
-                      <div style={{ fontSize: '10px', fontWeight: 700, color: '#f472b6' }}>Aiko • Online</div>
-                      <div style={{ fontSize: '8px', color: '#64748b' }}>Neural voice active</div>
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      background: 'rgba(236, 72, 153, 0.1)',
-                      border: '1px solid rgba(236, 72, 153, 0.2)',
-                      borderRadius: '6px',
-                      padding: '6px 8px',
-                      fontSize: '9px',
-                      color: '#fbcfe8',
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    &ldquo;Senpai, today&apos;s codebase looks sparkling clean! ✨&rdquo;
-                  </div>
+                  <img src="/public/assets/demo/mosso.png" alt="MOSSO" style={{ width: '100%', height: '100%' }} />
                 </div>
+                
               </div>
             }
           />
@@ -158,42 +128,19 @@ export function ProjectsSection(): JSX.Element {
                 {/* Visual Placeholder: Canvas Wireframe */}
                 <div
                   style={{
-                    width: '88%',
-                    height: '80%',
+                    width: '93%',
+                    height: '85%',
                     background: 'rgba(5, 15, 30, 0.9)',
-                    borderRadius: '8px',
+                    borderRadius: '5px',
                     border: '1px solid rgba(56, 189, 248, 0.3)',
-                    padding: '10px',
+                    padding: '2px',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
                     boxShadow: '0 0 20px rgba(56, 189, 248, 0.15)',
                   }}
                 >
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontSize: '9px', color: '#38bdf8', fontFamily: 'monospace', fontWeight: 700 }}>
-                      [RENDER TICK: 60 FPS]
-                    </span>
-                    <span style={{ fontSize: '8px', color: '#4ade80' }}>● WEBGL 2.0</span>
-                  </div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      gap: '4px',
-                      alignItems: 'flex-end',
-                      height: '35px',
-                      padding: '4px 0',
-                    }}
-                  >
-                    <div style={{ flex: 1, background: '#0284c7', height: '40%', borderRadius: '2px' }} />
-                    <div style={{ flex: 1, background: '#38bdf8', height: '75%', borderRadius: '2px' }} />
-                    <div style={{ flex: 1, background: '#7dd3fc', height: '100%', borderRadius: '2px' }} />
-                    <div style={{ flex: 1, background: '#38bdf8', height: '60%', borderRadius: '2px' }} />
-                    <div style={{ flex: 1, background: '#0284c7', height: '85%', borderRadius: '2px' }} />
-                  </div>
-                  <div style={{ fontSize: '8px', color: '#94a3b8', textAlign: 'center' }}>
-                    Multi-layer Parallax Camera Engine
-                  </div>
+                  <img src="/public/assets/demo/v2c.png" alt="Voice2Code" style={{ width: '100%', height: '100%' }} />
                 </div>
               </div>
             }

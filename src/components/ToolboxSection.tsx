@@ -44,7 +44,7 @@ export function ToolboxSection(): JSX.Element {
             alt=""
             aria-hidden="true"
             style={{
-              width: 'clamp(75px, 14vw, 220px)',
+              width: 'clamp(75px, 16vw, 200px)',
               height: 'auto',
               display: 'block',
               filter: 'drop-shadow(0 12px 24px rgba(0,0,0,0.6))',
