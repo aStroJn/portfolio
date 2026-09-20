@@ -61,7 +61,7 @@ export class ParallaxSystem {
         scrollOffsetX = scrollProgress * this.config.scrollSideShift * (depth / 1.8);
       }
 
-      if (id === 'bench' || id === 'ground' || id === 'midTrees' || id === 'screenLeft' || id === 'screenRight' || id === 'rightLamp' || id === 'signRight' || id === 'rightTree') {
+      if (id === 'bench' || id === 'mascot' || id === 'ground' || id === 'midTrees' || id === 'screenLeft' || id === 'screenRight' || id === 'rightLamp' || id === 'signRight' || id === 'rightTree') {
         // Mid & foreground elements transition downwards into the lower section
         scrollOffsetY = scrollProgress * this.config.scrollDownShift * (depth / 1.8);
       }
