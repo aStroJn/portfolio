@@ -12,6 +12,24 @@ export function AboutSection(): JSX.Element {
         overflow: 'hidden',
       }}
     >
+      {/* Independent decorative mascot hand */}
+      <img
+        src="/assets/site/section-four/section-four-Mascot-hand.png"
+        alt=""
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          left: '25px',
+          top: '56%',
+          width: 'clamp(170px, 15vw, 260px)',
+          height: 'auto',
+          transform: 'translate(-25%, -50%)',
+          zIndex: 10,
+          pointerEvents: 'none',
+          userSelect: 'none',
+        }}
+      />
+
       <div
         style={{
           maxWidth: '1240px',
