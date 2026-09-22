@@ -1,3 +1,115 @@
+type Technology = {
+  name: string;
+  icon: string;
+  x: string;
+  y: string;
+  size: string;
+};
+
+const technologies: Technology[] = [
+  {
+    name: 'Python',
+    icon: '/assets/site/section-two/tech/python.svg',
+    x: '25.2%',
+    y: '32%',
+    size: 'clamp(55px, 5.5vw, 92px)',
+  },
+  {
+    name: 'Django',
+    icon: '/assets/site/section-two/tech/django.svg',
+    x: '39.7%',
+    y: '32%',
+    size: 'clamp(48px, 5vw, 82px)',
+  },
+  {
+    name: 'React',
+    icon: '/assets/site/section-two/tech/react.svg',
+    x: '54.9%',
+    y: '32%',
+    size: 'clamp(52px, 5.2vw, 86px)',
+  },
+  {
+    name: 'TypeScript',
+    icon: '/assets/site/section-two/tech/typescript.svg',
+    x: '69.5%',
+    y: '32%',
+    size: 'clamp(48px, 5vw, 80px)',
+  },
+  {
+    name: 'Git',
+    icon: '/assets/site/section-two/tech/git.svg',
+    x: '25.2%',
+    y: '72%',
+    size: 'clamp(48px, 5vw, 82px)',
+  },
+  {
+    name: 'Docker',
+    icon: '/assets/site/section-two/tech/docker.svg',
+    x: '39.7%',
+    y: '72%',
+    size: 'clamp(48px, 5vw, 82px)',
+  },
+  {
+    name: 'SQLite',
+    icon: '/assets/site/section-two/tech/sqlite.svg',
+    x: '54.9%',
+    y: '72%',
+    size: 'clamp(48px, 5vw, 82px)',
+  },
+  {
+    name: 'JavaScript',
+    icon: '/assets/site/section-two/tech/javascript.svg',
+    x: '69.5%',
+    y: '72%',
+    size: 'clamp(48px, 5vw, 82px)',
+  },
+];
+
+type TechIconProps = {
+  src: string;
+  alt: string;
+  x: string;
+  y: string;
+  size?: string;
+};
+
+function TechIcon({ src, alt, x, y, size = 'clamp(48px, 5vw, 88px)' }: TechIconProps) {
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        left: x,
+        top: y,
+        transform: 'translate(-50%, -50%)',
+        width: size,
+        height: size,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        filter: 'drop-shadow(0 3px 3px rgba(0,0,0,0.35))',
+        transition: 'transform 180ms ease',
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translate(-50%, calc(-50% - 4px))';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'translate(-50%, -50%)';
+      }}
+    >
+      <img
+        src={src}
+        alt={alt}
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'contain',
+          display: 'block',
+        }}
+      />
+    </div>
+  );
+}
+
 export function ToolboxSection(): JSX.Element {
   return (
     <section
@@ -73,7 +185,7 @@ export function ToolboxSection(): JSX.Element {
         </div>
       </div>
 
-      {/* Shelf lowered slightly (about 10-15px lower) to give clean breathing room under subtitle */}
+      {/* Shelf Scene */}
       <div
         style={{
           width: '100%',
@@ -82,7 +194,7 @@ export function ToolboxSection(): JSX.Element {
           justifyContent: 'center',
           alignItems: 'flex-end',
           marginTop: 'clamp(-16.5rem, -20vw, -10.5rem)',
-          zIndex: 2,
+          zIndex: 4,
           lineHeight: 0,
         }}
       >
@@ -93,10 +205,27 @@ export function ToolboxSection(): JSX.Element {
             width: '100%',
             height: 'auto',
             display: 'block',
-            objectFit: 'cover',
-            filter: 'drop-shadow(0 -10px 25px rgba(0,0,0,0.4))',
           }}
         />
+
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            zIndex: 10,
+          }}
+        >
+          {technologies.map((tech) => (
+            <TechIcon
+              key={tech.name}
+              src={tech.icon}
+              alt={tech.name}
+              x={tech.x}
+              y={tech.y}
+              size={tech.size}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

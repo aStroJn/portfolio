@@ -23,32 +23,14 @@ export function Footer(): JSX.Element {
       >
         {/* Left: Copyright */}
         <div style={{ fontSize: '0.88rem' }}>
-          <span>© 2026 Akshat.</span>{' '}
+          <span>© 2026 Akshat Jain | Astropia</span>{' '}
           <span style={{ color: '#475569' }}>Built with PixiJS, React &amp; TypeScript.</span>
-        </div>
-
-        {/* Center: Made in India badge */}
-        <div
-          style={{
-            fontFamily: "'Caveat', 'Comic Sans MS', cursive, sans-serif",
-            fontSize: 'clamp(0.85rem, 1.2vw, 1rem)',
-            color: '#94a3b8',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '6px',
-            background: '#0f121d',
-            border: '1px solid #20263b',
-            padding: '5px 12px',
-            borderRadius: '20px',
-          }}
-        >
-          <span>MADE ON A BROWSER SOMEWHERE IN INDIA 🇮🇳</span>
         </div>
 
         {/* Right: Social Links */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
           <a
-            href="https://github.com"
+            href="https://github.com/aStroJn"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -72,7 +54,7 @@ export function Footer(): JSX.Element {
           </a>
 
           <a
-            href="https://linkedin.com"
+            href="http://www.linkedin.com/in/akshatj2002"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"

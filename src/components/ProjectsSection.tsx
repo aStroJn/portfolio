@@ -99,7 +99,7 @@ export function ProjectsSection(): JSX.Element {
                     boxShadow: '0 0 20px rgba(236, 72, 153, 0.15)',
                   }}
                 >
-                  <img src="/public/assets/demo/mosso.png" alt="MOSSO" style={{ width: '100%', height: '100%' }} />
+                  <img src="./assets/demo/mosso.png" alt="MOSSO" style={{ width: '100%', height: '100%' }} />
                 </div>
                 
               </div>
@@ -140,7 +140,7 @@ export function ProjectsSection(): JSX.Element {
                     boxShadow: '0 0 20px rgba(56, 189, 248, 0.15)',
                   }}
                 >
-                  <img src="/public/assets/demo/v2c.png" alt="Voice2Code" style={{ width: '100%', height: '100%' }} />
+                  <img src="./assets/demo/v2c.png" alt="Voice2Code" style={{ width: '100%', height: '100%' }} />
                 </div>
               </div>
             }
