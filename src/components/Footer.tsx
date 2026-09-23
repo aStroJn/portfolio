@@ -24,7 +24,6 @@ export function Footer(): JSX.Element {
         {/* Left: Copyright */}
         <div style={{ fontSize: '0.88rem' }}>
           <span>© 2026 Akshat Jain | Astropia</span>{' '}
-          <span style={{ color: '#475569' }}>Built with PixiJS, React &amp; TypeScript.</span>
         </div>
 
         {/* Right: Social Links */}

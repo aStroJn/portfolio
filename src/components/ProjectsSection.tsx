@@ -28,7 +28,7 @@ export function ProjectsSection(): JSX.Element {
         >
           <div>
             <img
-              src="/assets/site/section-one/section-one-title.svg"
+              src="/assets/site/section-one/section-one-title.webp"
               alt="01. FEATURED PROJECTS - Real-world projects, experiments and ideas brought to life."
               style={{
                 width: 'clamp(180px, 60vw, 600px)',
@@ -58,12 +58,16 @@ export function ProjectsSection(): JSX.Element {
           </div>
         </div>
 
-        {/* 3 Project Cards Grid */}
+        {/* 2 Project Cards Grid - Centered */}
         <div
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+            display: 'flex',
+            justifyContent: 'center',
             gap: '1.75rem',
+            maxWidth: '800px',
+            margin: '0 auto',
+            overflowX: 'auto',
+            paddingBottom: '0.5rem',
           }}
         >
           <ProjectCard
@@ -84,7 +88,7 @@ export function ProjectsSection(): JSX.Element {
                   overflow: 'hidden',
                 }}
               >
-                
+
                 <div
                   style={{
                     width: '93%',
@@ -101,16 +105,16 @@ export function ProjectsSection(): JSX.Element {
                 >
                   <img src="./assets/demo/mosso.png" alt="MOSSO" style={{ width: '100%', height: '100%' }} />
                 </div>
-                
+
               </div>
             }
           />
 
-          {/* Card 2: Devfolio Studio */}
+          {/* Card 2: Voice2Code */}
           <ProjectCard
             title="Voice2Code"
             description="Local voice-to-code assistant that turns natural language into code with real-time speech recognition, AI generation, and automated code insertion."
-            tags={['PYTHON', 'FLASK', 'ELECTROM', 'OLLAMA']}
+            tags={['PYTHON', 'FLASK', 'ELECTRON', 'OLLAMA']}
             link="https://github.com"
             preview={
               <div
@@ -141,68 +145,6 @@ export function ProjectsSection(): JSX.Element {
                   }}
                 >
                   <img src="./assets/demo/v2c.png" alt="Voice2Code" style={{ width: '100%', height: '100%' }} />
-                </div>
-              </div>
-            }
-          />
-
-          {/* Card 3: Synthwave Hub */}
-          <ProjectCard
-            title="Synthwave Hub"
-            description="WebAudio-driven interactive synthesizer and retro visualizer with MIDI support and real-time DSP filters."
-            tags={['WEBAUDIO', 'CANVAS', 'TYPESCRIPT', 'TAILWIND']}
-            link="https://github.com"
-            preview={
-              <div
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  background: 'linear-gradient(135deg, #2e0854 0%, #120324 100%)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  position: 'relative',
-                  overflow: 'hidden',
-                }}
-              >
-                {/* Visual Placeholder: Audio Visualizer */}
-                <div
-                  style={{
-                    width: '88%',
-                    height: '80%',
-                    background: 'rgba(20, 5, 40, 0.9)',
-                    borderRadius: '8px',
-                    border: '1px solid rgba(168, 85, 247, 0.4)',
-                    padding: '10px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    boxShadow: '0 0 20px rgba(168, 85, 247, 0.2)',
-                  }}
-                >
-                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ fontSize: '9px', color: '#c084fc', fontWeight: 700 }}>OSC 1 • SAWTOOTH</span>
-                    <span style={{ fontSize: '8px', color: '#e879f9' }}>120 BPM</span>
-                  </div>
-                  {/* Waveform sine display */}
-                  <svg width="100%" height="30" viewBox="0 0 160 30" style={{ overflow: 'visible' }}>
-                    <path
-                      d="M0 15 Q20 0 40 15 T80 15 T120 15 T160 15"
-                      fill="none"
-                      stroke="#c084fc"
-                      strokeWidth="2"
-                    />
-                    <path
-                      d="M0 15 Q20 30 40 15 T80 15 T120 15 T160 15"
-                      fill="none"
-                      stroke="#f472b6"
-                      strokeWidth="1"
-                      strokeDasharray="2 2"
-                    />
-                  </svg>
-                  <div style={{ fontSize: '8px', color: '#a855f7', textAlign: 'center' }}>
-                    Low-Pass Ladder Filter • Cutoff: 2.4kHz
-                  </div>
                 </div>
               </div>
             }

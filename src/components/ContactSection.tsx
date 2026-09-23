@@ -152,24 +152,17 @@ export function ContactSection(): JSX.Element {
           {/* Glowing CTA Button with Pointing Hand */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(4px, 0vw, 10px)' }}>
             {/* Pointing Hand Icon */}
-            <svg
-              width="clamp(22px, 3.5vw, 36px)"
-              height="clamp(16px, 2.5vw, 26px)"
-              viewBox="0 0 32 24"
-              fill="none"
+            <img
+              src="/assets/site/section-five/hand-pointing.webp"
+              alt="Pointing hand icon"
               style={{
-                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.6))',
-                flexShrink: 0,
+                width: 'clamp(36px, 6vw, 62px)',
+                height: 'auto',
+                transform: 'rotate(15deg)',
+                filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.5))',
+                display: 'block',
               }}
-            >
-              <path
-                d="M2 9C2 7.89 2.89 7 4 7H9V3C9 1.89 9.89 1 11 1C12.11 1 13 1.89 13 3V12H16C17.11 12 18 12.89 18 14C18 15.11 17.11 16 16 16H11L7.5 19.5C6.7 20.3 5.3 20.3 4.5 19.5L2 17V9Z"
-                fill="#fed7aa"
-                stroke="#7c2d12"
-                strokeWidth="1.5"
-              />
-              <rect x="0.5" y="6.5" width="4.5" height="11" rx="1.5" fill="#f8fafc" stroke="#334155" strokeWidth="1" />
-            </svg>
+            />
 
             {/* Glowing Button */}
             <a
