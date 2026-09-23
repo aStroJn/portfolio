@@ -91,7 +91,7 @@ export function ProjectsSection(): JSX.Element {
 
                 <div
                   style={{
-                    width: '93%',
+                    width: '85%',
                     height: '85%',
                     background: 'rgba(10, 11, 20, 0.85)',
                     borderRadius: '5px',
@@ -103,7 +103,7 @@ export function ProjectsSection(): JSX.Element {
                     boxShadow: '0 0 20px rgba(236, 72, 153, 0.15)',
                   }}
                 >
-                  <img src="./assets/demo/mosso.png" alt="MOSSO" style={{ width: '100%', height: '100%' }} />
+                  <img src="./assets/demo/mosso.webp" alt="MOSSO" style={{ width: '100%', height: '100%' }} />
                 </div>
 
               </div>
@@ -115,7 +115,7 @@ export function ProjectsSection(): JSX.Element {
             title="Voice2Code"
             description="Local voice-to-code assistant that turns natural language into code with real-time speech recognition, AI generation, and automated code insertion."
             tags={['PYTHON', 'FLASK', 'ELECTRON', 'OLLAMA']}
-            link="https://github.com"
+            link="https://github.com/aStroJn/Voice2Code"
             preview={
               <div
                 style={{
@@ -132,7 +132,7 @@ export function ProjectsSection(): JSX.Element {
                 {/* Visual Placeholder: Canvas Wireframe */}
                 <div
                   style={{
-                    width: '93%',
+                    width: '90%',
                     height: '85%',
                     background: 'rgba(5, 15, 30, 0.9)',
                     borderRadius: '5px',
@@ -144,7 +144,7 @@ export function ProjectsSection(): JSX.Element {
                     boxShadow: '0 0 20px rgba(56, 189, 248, 0.15)',
                   }}
                 >
-                  <img src="./assets/demo/v2c.png" alt="Voice2Code" style={{ width: '100%', height: '100%' }} />
+                  <img src="./assets/demo/v2c.webp" alt="Voice2Code" style={{ width: '100%', height: '100%' }} />
                 </div>
               </div>
             }

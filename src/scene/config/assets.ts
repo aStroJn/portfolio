@@ -5,31 +5,31 @@ import type { SceneObjectId } from './scene';
  * Do not import assets from anywhere else in the codebase.
  */
 export const sceneAssets = {
-  sky: '/assets/scene/background/sky.png',
-  sun: '/assets/scene/background/sun.png',
-  mountains: '/assets/scene/background/mountains.png',
-  city: '/assets/scene/background/city.png',
-  midTrees: '/assets/scene/environment/mid-trees-bushes.png',
-  rightTree: '/assets/scene/environment/right-tree.png',
-  ground: '/assets/scene/foreground/ground.png',
-  bench: '/assets/scene/objects/bench.png',
-  screenLeft: '/assets/scene/objects/screen-left/screen-left-one.png',
-  screenRight: '/assets/scene/objects/screen right/screen-right-one.png',
-  signRight: '/assets/scene/objects/sign-right.png',
-  rightLamp: '/assets/scene/objects/right-lamp.png',
-  mascot: '/assets/scene/character/mascot.png',
+  sky: '/assets/scene/background/sky.webp',
+  sun: '/assets/scene/background/sun.webp',
+  mountains: '/assets/scene/background/mountains.webp',
+  city: '/assets/scene/background/city.webp',
+  midTrees: '/assets/scene/environment/mid-trees-bushes.webp',
+  rightTree: '/assets/scene/environment/right-tree.webp',
+  ground: '/assets/scene/foreground/ground.webp',
+  bench: '/assets/scene/objects/bench.webp',
+  screenLeft: '/assets/scene/objects/screen-left/screen-left-one.webp',
+  screenRight: '/assets/scene/objects/screen right/screen-right-one.webp',
+  signRight: '/assets/scene/objects/sign-right.webp',
+  rightLamp: '/assets/scene/objects/right-lamp.webp',
+  mascot: '/assets/scene/character/mascot.webp',
 } as const;
 
 export const screenLeftFrames = [
-  '/assets/scene/objects/screen-left/screen-left-one.png',
-  '/assets/scene/objects/screen-left/screen-left-two.png',
-  '/assets/scene/objects/screen-left/screen-left-three.png',
+  '/assets/scene/objects/screen-left/screen-left-one.webp',
+  '/assets/scene/objects/screen-left/screen-left-two.webp',
+  '/assets/scene/objects/screen-left/screen-left-three.webp',
 ] as const;
 
 export const screenRightFrames = [
-  '/assets/scene/objects/screen right/screen-right-one.png',
-  '/assets/scene/objects/screen right/screen-right-two.png',
-  '/assets/scene/objects/screen right/screen-right-three.png',
+  '/assets/scene/objects/screen right/screen-right-one.webp',
+  '/assets/scene/objects/screen right/screen-right-two.webp',
+  '/assets/scene/objects/screen right/screen-right-three.webp',
 ] as const;
 
 export const allSceneAssetUrls = [

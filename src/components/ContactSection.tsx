@@ -28,7 +28,7 @@ export function ContactSection(): JSX.Element {
         }}
       >
         <img
-          src="/assets/site/section-five/section-five-title.svg"
+          src="/assets/site/section-five/section-five-title.webp"
           alt="05. GET IN TOUCH - Have an idea, a project, or just want to say hi? I'd love to hear from you."
           style={{
             width: 'clamp(240px, 75vw, 560px)',
@@ -49,7 +49,7 @@ export function ContactSection(): JSX.Element {
       >
         {/* Full-width edge-to-edge Desk Illustration */}
         <img
-          src="/assets/site/section-five/section-five-desk.png"
+          src="/assets/site/section-five/section-five-desk.webp"
           alt="Desk setup with retro CRT monitor, cat, coffee mug, and plant"
           style={{
             width: '100%',

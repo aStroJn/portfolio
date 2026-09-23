@@ -152,7 +152,7 @@ export function ToolboxSection(): JSX.Element {
           }}
         >
           <img
-            src="/assets/site/section-two/section-two-top-left-plant.png"
+            src="/assets/site/section-two/section-two-top-left-plant.webp"
             alt=""
             aria-hidden="true"
             style={{
@@ -173,7 +173,7 @@ export function ToolboxSection(): JSX.Element {
           }}
         >
           <img
-            src="/assets/site/section-two/section-two-title.svg"
+            src="/assets/site/section-two/section-two-title.webp"
             alt="02. THE TOOLBOX - Languages, frameworks and tools I build with daily."
             style={{
               width: 'clamp(160px, 30vw, 360px)',
@@ -193,7 +193,7 @@ export function ToolboxSection(): JSX.Element {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'flex-end',
-          marginTop: 'clamp(-16.5rem, -20vw, -10.5rem)',
+          marginTop: 'clamp(-11.5rem, -15vw, -5.5rem)',
           zIndex: 4,
           lineHeight: 0,
         }}

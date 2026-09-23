@@ -38,7 +38,7 @@ export function AboutSection(): JSX.Element {
     >
       {/* Independent decorative mascot hand */}
       <img
-        src="/assets/site/section-four/section-four-Mascot-hand.png"
+        src="/assets/site/section-four/section-four-Mascot-hand.webp"
         alt=""
         aria-hidden="true"
         style={{
@@ -69,7 +69,7 @@ export function AboutSection(): JSX.Element {
           {/* Section Header: Standalone "ABOUT ME" */}
           <div style={{ textAlign: 'left', marginBottom: '24px' }}>
             <img
-              src="/assets/site/section-four/section-four-title.svg"
+              src="/assets/site/section-four/section-four-title.webp"
               alt="ABOUT ME"
               style={{
                 width: '260px', // desktop max from clamp(180px, 35vw, 260px)
@@ -99,7 +99,7 @@ export function AboutSection(): JSX.Element {
               }}
             >
               <img
-                src="/assets/site/section-four/section-four-polaroid.png"
+                src="/assets/site/section-four/section-four-polaroid.webp"
                 alt="Polaroid illustration"
                 style={{
                   width: '300px', // Fixed desktop width
@@ -110,7 +110,7 @@ export function AboutSection(): JSX.Element {
               />
             </div>
 
-            {/* Right: papernote.png + Overlaid Sticky Note (Box 1) & Mountain Doodle (Box 2) */}
+            {/* Right: papernote.webp + Overlaid Sticky Note (Box 1) & Mountain Doodle (Box 2) */}
             <div
               style={{
                 position: 'relative',
@@ -122,7 +122,7 @@ export function AboutSection(): JSX.Element {
             >
               {/* The Paper Note Graphic Asset */}
               <img
-                src="/assets/site/section-four/section-four-papernote.png"
+                src="/assets/site/section-four/section-four-papernote.webp"
                 alt="About me note - Full-stack engineer and Designer"
                 style={{
                   width: '100%',
@@ -147,7 +147,7 @@ export function AboutSection(): JSX.Element {
                 }}
               >
                 <img
-                  src="/assets/site/section-four/section-four-stickynote.png"
+                  src="/assets/site/section-four/section-four-stickynote.webp"
                   alt="Sticky note - BUILD PLAY LEARN IMPROVE ☺"
                   style={{
                     width: '100%',
