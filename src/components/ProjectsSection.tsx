@@ -115,7 +115,7 @@ export function ProjectsSection(): JSX.Element {
             title="Voice2Code"
             description="Local voice-to-code assistant that turns natural language into code with real-time speech recognition, AI generation, and automated code insertion."
             tags={['PYTHON', 'FLASK', 'ELECTRON', 'OLLAMA']}
-            link="https://github.com/aStroJn/Voice2Code"
+            link="https://v2c-astropia.vercel.app/"
             preview={
               <div
                 style={{
